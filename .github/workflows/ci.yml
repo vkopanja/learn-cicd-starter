@@ -27,9 +27,7 @@ jobs:
           exit $?
 
       - name: Run staticcheck
-        run: |
-          test -z $(staticcheck ./...)
-          echo $?
+        run: staticcheck ./...
 
   tests:
     name: Tests
